@@ -9,6 +9,7 @@ html {
   width: 960px;
   margin: 0 auto;
   justify-content: center;
+  align-items: center;
 }
 .navbar {
   background-color: #4e4e4e;
@@ -54,13 +55,23 @@ nav a {
 .nav-link.nav-link--disabled {
   cursor: not-allowed;
 }
-
+.overlay {
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
 .main-background {
   height: 100vh;
   width: 100%;
   color: #fff;
   background-size: cover;
   background-image: url(tapeta.jpg);
+  align-items: center;
+  display: flex;
 }
 
 .main-title {
@@ -68,7 +79,13 @@ nav a {
   font-size: 36px;
   font-weight: 700;
   margin-top: 0;
-  padding-top: 178px;
+  text-align: left;
+}
+.main-title-first {
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 0;
   text-align: left;
   margin-bottom: 62px;
 }
@@ -79,10 +96,9 @@ nav a {
 }
 
 .main-button {
-  background-color: #000;
   color: #fff;
   border: 2px solid #fff;
-  padding: 10px 20px;
+  padding: 9px 58.5px;
   font-size: 16px;
   cursor: pointer;
   transition: all 1s ease-in-out;
@@ -103,14 +119,9 @@ nav a {
   padding-top: 51px;
   font-size: 36px;
   text-align: left;
-  margin-bottom: 78px;
+  margin-bottom: 68px;
 }
 
-.specialist {
-  display: flex;
-  align-items: center;
-  margin-top: 0;
-}
 .specialist-image {
   height: 197px;
   width: 197px;
@@ -128,41 +139,43 @@ nav a {
 .specialist-info {
   margin-top: 0;
 }
-.specialist:nth-child(odd) {
+.specialist {
   display: flex;
-  flex-direction: row;
-  text-align: left;
   align-items: center;
-  margin-bottom: 46px;
+  margin-top: 0;
+}
+.specialist:nth-child(odd) {
+  text-align: left;
+  margin-bottom: 68px;
 }
 .specialist:nth-child(even) {
-  display: flex;
   flex-direction: row-reverse;
   text-align: right;
-  align-items: center;
 }
 .offer {
   background-color: #405d78;
   height: 100%;
   padding-bottom: 64px;
 }
-.oferta-header {
+.offer-header {
   color: white;
   font-weight: 700;
   display: flex;
   font-size: 36px;
   padding-top: 50px;
   padding-bottom: 82px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
-.oferta-container {
+.offer-container {
   display: grid;
   grid-template-columns: 198px 198px 198px;
   grid-template-rows: 193px 193px;
   justify-content: center;
   grid-gap: 63px;
 }
-.oferta-box {
+.offer-box {
   display: flex;
   width: 198px;
   height: 193px;
@@ -170,9 +183,10 @@ nav a {
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
 }
 
-.oferta-box:hover {
+.offer-box:hover {
   animation-name: grow;
   animation-duration: 0.5s;
   transform: scale(1.05);
@@ -187,14 +201,14 @@ nav a {
   }
 }
 
-.oferta-box-text {
+.offer-box-text {
   font-size: 24px;
   padding-bottom: 0;
 }
 .new {
   margin-top: 0;
 }
-.oferta-box-circle {
+.offer-box-circle {
   width: 22px;
   height: 22px;
   position: absolute;
